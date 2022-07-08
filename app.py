@@ -50,11 +50,11 @@ def get_lonlat(address):
     return  float(response['lat']), float(response['lon'])
 
 # get pickup lat/long
-pickup = st.text_input('Pickup location (street name, number, and city):', 'Mariannenstr. 61, Leipzig')
+pickup = st.text_input('Pickup location (street name, number, and city):', '20 W 34th St., New York, NY 10001, United States')
 lat1, lon1 = get_lonlat(pickup)
 
 # get dropoff lat/long
-dropoff = st.text_input('Dropoff location (street name, number, and city):', 'Weichselstr. 43, Berlin')
+dropoff = st.text_input('Dropoff location (street name, number, and city):', '334 Furman St, Brooklyn, NY 11201, United States')
 lat2, lon2 = get_lonlat(dropoff)
 
 # get number of passengers
