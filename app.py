@@ -57,10 +57,11 @@ lat1, lon1 = get_lonlat(pickup)
 dropoff = st.text_input('Dropoff location (street name, number, and city):', '334 Furman St, Brooklyn, NY 11201, United States')
 lat2, lon2 = get_lonlat(dropoff)
 
+#get map
+
+
 # get number of passengers
 # num_passenger = st.number_input('Select number of passengers')
-
-
 passengers = st.slider('Select number of passengers', 1, 20, 3)
 
 
@@ -105,5 +106,6 @@ response = requests.get(url,
 
 ## Finally, we can display the prediction to the user
 '''
-
+fare= round(response['fare'], 2)
 st.write('Your estimated fare: ', round(response['fare'], 2))
+col1.metric("Fare", "fare")
