@@ -3,6 +3,8 @@ import datetime
 import requests
 import pandas as pd
 import numpy as np
+import mapbox
+
 
 '''
 # Taxi fare calculation for NY city
@@ -45,10 +47,6 @@ pickup_point = {"lat":[lat1, lat2], "lon":[lon1, lon2]}
 pickup_df= pd.DataFrame(data=pickup_point)
 st.map(pickup_df)
 
-
-
-
-# https://api.mapbox.com/directions/v5/mapbox/driving-traffic
 
 
 # get number of passengers
